@@ -5,7 +5,7 @@
     font-family: 'DotMatrix Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('DotMatrix Regular'), url('../dist/fonts/DOTMATRX.woff') format('woff');
+    src: local('DotMatrix Regular'), url('DOTMATRX.woff') format('woff');
     }
     
 
@@ -13,7 +13,7 @@
     font-family: 'DotMatrix_TR Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('DotMatrix_TR Regular'), url('../dist/fonts/DotMatrix_TR.woff') format('woff');
+    src: local('DotMatrix_TR Regular'), url('DotMatrix_TR.woff') format('woff');
     }
 
 .dotmatrix {
