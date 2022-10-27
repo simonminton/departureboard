@@ -5,7 +5,7 @@
   >
     <div class="flex-1">{{ train.towards }}</div>
     <div class="flex-0">
-      {{ (train.timeToStation / 60) | floor }} min<span
+      {{ (train.timeToStation / 60) }} min<span
         v-if="(train.timeToStation / 60) | (floor > 1)"
         >s</span
       >
