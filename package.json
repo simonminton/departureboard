@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npx tailwindcss -i ./src/assets/base.css -o ./dist/output.css",
+    "build": "npx tailwindcss -i ./src/assets/base.css -o ./src/assets/output.css && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
