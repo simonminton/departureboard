@@ -33,74 +33,7 @@ export default {
     // this.getStationLines();
   },
   methods: {
-    getStationLines() {
-      // str to uppr
-      var station = this.$route.params.station.toUpperCase();
-      var apiUrl =
-        "https://api.tfl.gov.uk/StopPoint/ServiceTypes?id=940GZZLU" +
-        station +
-        "&modes=tube";
-      // Fetch train data from the API
-      const res = fetch(apiUrl)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          // Sort data by due time
-
-          this.lines = data;
-        });
-    },
-    getTrainData() {
-      var station = this.$route.params.station.toUpperCase();
-      var apiUrl =
-        "https://api.tfl.gov.uk/StopPoint/940GZZLU" + station + "/arrivals";
-      if (this.$route.params.line) {
-        apiUrl =
-          "https://api.tfl.gov.uk/Line/" +
-          this.$route.params.line +
-          "/Arrivals/940GZZLU" +
-          station;
-      }
-      if (this.$route.params.direction) {
-        apiUrl =
-          "https://api.tfl.gov.uk/Line/" +
-          this.$route.params.line +
-          "/Arrivals/940GZZLU" +
-          station +
-          "?direction=" +
-          this.$route.params.direction;
-      }
-      if (this.$route.params.destination) {
-        apiUrl =
-          "https://api.tfl.gov.uk/Line/" +
-          this.$route.params.line +
-          "/Arrivals/940GZZLU" +
-          station +
-          "?direction=" +
-          this.$route.params.direction +
-          "&destinationStationId=940GZZLU" +
-          this.$route.params.destination;
-      }
-      // Fetch train data from the API
-
-      console.log("updating");
-      const res = fetch(apiUrl)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          // Sort data by due time
-          data.sort((a, b) => (a.timeToStation > b.timeToStation ? 1 : -1));
-          this.trainData = data;
-          // Remove Underground Station from name if it exists
-          this.stationName = data[0].stationName.replace(
-            " Underground Station",
-            ""
-          );
-          setTimeout(this.getTrainData, 15000);
-        });
-    },
+   
   },
 };
 </script>
