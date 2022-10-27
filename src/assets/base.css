@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'DotMatrix Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DotMatrix Regular'), url('../dist/fonts/DOTMATRX.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'DotMatrix_TR Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DotMatrix_TR Regular'), url('../dist/fonts/DotMatrix_TR.woff') format('woff');
+    }
+
+.dotmatrix {
+    font-family:'DotMatrix Regular';
+    font-weight:normal;
+}
